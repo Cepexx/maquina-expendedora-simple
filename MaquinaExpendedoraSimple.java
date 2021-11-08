@@ -23,12 +23,12 @@ public class MaquinaExpendedoraSimple {
         estacionOrigen = "Léon";
         estacionDestino = "OtraCiudad";
     }
-    public MaquinaExpendedoraSimple(int precioDelBillete, String Destino ) {
+    public MaquinaExpendedoraSimple(int precioDelBillete, String destino ) {
         precioBillete = precioDelBillete;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
         estacionOrigen = "Léon";
-        estacionDestino = Destino;
+        estacionDestino = destino;
     }
     /**
      * Devuelve el precio del billete
@@ -50,7 +50,12 @@ public class MaquinaExpendedoraSimple {
     public void introducirDinero(int cantidadIntroducida) {
         balanceClienteActual = balanceClienteActual + cantidadIntroducida;
     }
-
+    /**
+     * Saca el total de dinero almacenado en la máquina
+     */
+    public int dimeDinero() {
+        return totalDineroAcumulado;
+    }
     /**
      * Imprime un billete para el cliente actual
      */
